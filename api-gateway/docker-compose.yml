@@ -1,0 +1,36 @@
+version: '3.8'
+services:
+  api-auth:
+    build:
+      context: ../mvp-arquitetura-de-software-api-auth-main
+    container_name: api-auth
+    ports:
+      - "5003:5003"
+
+  api-grade:
+    build:
+      context: ../mvp-arquitetura-de-software-api-grade-main
+    container_name: api-grade
+    ports:
+      - "5002:5002"
+
+  api-student:
+    build:
+      context: ../mvp-arquitetura-de-software-api-student-main
+    container_name: api-student
+    ports:
+      - "5001:5001"
+
+  api-gateway:
+    build:
+      context: .
+    container_name: api-gateway
+    ports:
+      - "5000:5000"
+
+  front-escola:
+    build:
+      context: ../mvp-arquitetura-de-software-api-escola-front-main
+    container_name: front-escola
+    ports:
+      - "8080:80"

@@ -1,0 +1,5 @@
+api-user/env/
+api-user/_paycache/
+api-user/*.pyc
+api-user/log/
+api-user/database/
